@@ -9,8 +9,8 @@ This is Laravel-Based Backend for Frontend Integration with a set of RESTful end
 ### For first time only !
 - `git clone https://github.com/giezele/laravel-scrape.git`
 - `cd laravel-scrape`
-- Copy `.env.example` file to `.env` and edit database credentials there
-- ```
+- copy `.env.example` file to `.env` and edit database credentials there
+```
   DB_DATABASE={your db name}
   DB_USERNAME={your username}
   DB_PASSWORD={your password}
