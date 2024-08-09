@@ -14,7 +14,7 @@ use Illuminate\Http\JsonResponse;
 class JobController extends Controller
 {
     public function __construct(
-        protected JobService $jobService
+        private JobService $jobService
     ) {
     }
 
@@ -30,10 +30,10 @@ class JobController extends Controller
     }
 
     /**
-     * @param $id
+     * @param string $id
      * @return JsonResponse
      */
-    public function show($id): JsonResponse
+    public function show(string $id): JsonResponse
     {
         $jobData = $this->jobService->getJobData($id);
         if (!$jobData) {

@@ -29,7 +29,11 @@ class JobService
         return $jobIds;
     }
 
-    public function getJobData($id)
+    /**
+     * @param string $id
+     * @return mixed|null
+     */
+    public function getJobData(string $id): mixed
     {
         $jobData = Redis::get("job:$id");
         if (!$jobData) {
@@ -38,7 +42,11 @@ class JobService
         return json_decode($jobData, true);
     }
 
-    public function deleteJob($id)
+    /**
+     * @param string $id
+     * @return void
+     */
+    public function deleteJob(string $id): void
     {
         Redis::delete("job:$id");
     }
