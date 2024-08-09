@@ -44,10 +44,10 @@ class JobController extends Controller
     }
 
     /**
-     * @param $id
+     * @param string $id
      * @return JsonResponse
      */
-    public function destroy($id): JsonResponse
+    public function destroy(string $id): JsonResponse
     {
         $this->jobService->deleteJob($id);
 
